@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.linkSpan{
+  color: #E50914;
+  text-decoration: underline;
+  cursor: pointer;
+}
