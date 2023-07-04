@@ -22,7 +22,7 @@ const SignUp
   return (
     <div className='flex w-full '>
         <div className='hidden sm:flex min-h-[100vh] w-[40%]  m-0'>
-            <img className=' min-w-full object-cover '   src='/assets/signupImg.svg' alt='sign up' />
+            <Image className=' min-w-full object-cover ' width={696} height={996} priority  src='/assets/signupImg.svg' alt='sign up' />
         </div>
         <div className='flex flex-col w-full p-4 sm:w-[60%] items-center'>
             <div className='flex gap-3 items-center'>
