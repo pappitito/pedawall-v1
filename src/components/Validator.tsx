@@ -13,7 +13,7 @@ const Validator = ({text, validateSetter}: ValidatorProps) => {
         }
         else if(text.length >= 6 && /[A-Z]/.test(text) && /[0-9]/.test(text) ){
             validateSetter(true)
-            return <div className='text-[#b9ec2d]'>Almost Strong</div>
+            return <div className='text-[#b9ec2d]'>Almost there</div>
         }
         else if(text.length >= 6 && /[0-9]/.test(text) ){
             validateSetter(true)
