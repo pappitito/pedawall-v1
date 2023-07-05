@@ -25,6 +25,8 @@ const SignUp
     <div className='flex w-full '>
         <head>
             <title>Sign Up</title>
+            <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
+
         </head>
         <div className='hidden sm:flex min-h-[100vh] w-[40%]  m-0'>
             <Image className=' min-w-full object-cover ' width={40} height={60} priority  src='/assets/signupImg.svg' alt='sign up' />
