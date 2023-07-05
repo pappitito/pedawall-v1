@@ -10,3 +10,7 @@
 .trans{
   transition: all 0.4s ease-in-out;
 }
+.redlink{
+  color: #E50914;
+  cursor: pointer;
+}

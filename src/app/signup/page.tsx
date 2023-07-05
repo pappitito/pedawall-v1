@@ -3,6 +3,7 @@ import Button from '@/components/Button'
 import Input from '@/components/Input'
 import Validator from '@/components/Validator'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 const SignUp
@@ -22,7 +23,7 @@ const SignUp
   return (
     <div className='flex w-full '>
         <div className='hidden sm:flex min-h-[100vh] w-[40%]  m-0'>
-            <img className=' min-w-full object-cover '   src='/assets/signupImg.svg' alt='sign up' />
+            <Image className=' min-w-full object-cover ' width={40} height={60} priority  src='/assets/signupImg.svg' alt='sign up' />
         </div>
         <div className='flex flex-col w-full p-4 sm:w-[60%] items-center'>
             <div className='flex gap-3 items-center'>
@@ -42,6 +43,8 @@ const SignUp
                 <div className='max-w-[20rem] w-full mt-4'>
                     <Button disabled={handleDisabler()} content='Sign up' />
                 </div>
+                <div className='w-full mt-[2rem] text-center text-[0.9rem] font-medium '>Already have an account? <Link className='text-[#5D5D1C] cursor-pointer' href={'/login'}>Log in</Link></div>
+
             </div>
         </div>
     </div>
