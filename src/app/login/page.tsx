@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import SignUp from '../signup/page'
+import Head from 'next/head'
 
 const Login = () => {
     const [keepLogged, setKeepLogged] = useState(false)
@@ -20,6 +21,9 @@ const Login = () => {
     }
   return (
     <div className='flex w-full '>
+        <head>
+            <title>Log in</title>
+        </head>
         <div className='hidden sm:flex min-h-[100vh] w-[40%]  m-0'>
             <Image className=' min-w-full object-cover ' width={40} height={60} priority  src='/assets/loginImg.svg' alt='sign up' />
         </div>
