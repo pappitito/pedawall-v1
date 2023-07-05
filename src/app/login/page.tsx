@@ -21,9 +21,9 @@ const Login = () => {
     }
   return (
     <div className='flex w-full '>
-        <Head>
+        <head>
             <title>Log in</title>
-        </Head>
+        </head>
         <div className='hidden sm:flex min-h-[100vh] w-[40%]  m-0'>
             <Image className=' min-w-full object-cover ' width={40} height={60} priority  src='/assets/loginImg.svg' alt='sign up' />
         </div>
