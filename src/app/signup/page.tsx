@@ -36,7 +36,7 @@ const SignUp
                 <img className='w-[2.2rem]' src='/assets/logo.svg' alt='logo' />
                 <h4 className='text-[1.3rem]'>Pedawalls</h4>
             </div>
-            <div className=' flex flex-col w-full pl-2 pr-2 max-w-[31rem] gap-5 items-center  mt-[10vh]'>
+            <div className=' flex flex-col w-full pl-2 pr-2 max-w-[31rem] gap-5 items-center  mt-[7vh] lg:mt-[10vh]'>
                 <h1 className='text-[1.6rem] font-semibold text-center mb-4 '>Create Account</h1>
                 <Input value={name} onChange={(e: any)=> setName(e.target.value)}  label='Full name' />
                 <Input value={email} onChange={(e: any)=> setEmail(e.target.value)}  label='Email Address' />
