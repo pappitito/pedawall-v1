@@ -26,10 +26,10 @@ const Header = () => {
             </div>
        </form>
        <div className='flex  gap-3'>
-            <Link className=' w-[8rem] ' href='/signup'>
+            <Link className=' w-[8rem] ' href='/login'>
                 <Button isOutlined content='Login'  />
             </Link>
-             <Link className='w-[8rem]' href='/login'>
+             <Link className='w-[8rem]' href='/signup'>
                 <Button  content='Signup'  />
              </Link>
              

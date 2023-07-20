@@ -34,10 +34,10 @@ const EducationUltraMuros = () => {
                         Learn, Grow, and Achieve with Us</div>
                 </div>
                 <div className='flex max-w-[19rem] myCenter2 sm:m-0 sm:mt-[3rem] gap-2  justify-between w-full  mb-7'>
-                    <Link className=' w-[8rem] ' href='/signup'>
+                    <Link className=' w-[8rem] ' href='/login'>
                          <Button isOutlined content='Login'  />
                     </Link>
-                    <Link className='w-[8rem]' href='/login'>
+                    <Link className='w-[8rem]' href='/signup'>
                         <Button  content='Signup'  />
                     </Link>
              
