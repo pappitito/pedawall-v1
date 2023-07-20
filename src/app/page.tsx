@@ -1,15 +1,20 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
+import Header from '@/containers/Header'
+import EducationUltraMuros from '@/containers/EducationUltraMuros'
+import ExploreByCategory from '@/containers/ExploreByCategory'
+import Vision from '@/containers/Vision'
 
 export default function Home() {
   return (
-    <main>
+    <main className=''>
+      <title>Pedawalls</title>
+        <Header />
+        <EducationUltraMuros/>
+        <ExploreByCategory />
+        <Vision />
       
-      <div className='flex flex-col p-3 gap-3'>
-      <Link className='redlink ' href='/signup'>Sign up</Link>
-      <Link className='redlink ' href='/login'>Log in</Link>
-      </div>
     </main>
   )
 }

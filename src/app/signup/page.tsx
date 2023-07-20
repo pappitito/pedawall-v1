@@ -22,12 +22,10 @@ const SignUp
 
     }
   return (
-    <div className='flex w-full '>
-        <head>
-            <title>Sign Up</title>
-            <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
-
-        </head>
+    <div className='flex w-full bg-white h-screen overflow-auto'>
+        <title>Sign up</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
+       
         <div className='hidden sm:flex min-h-[100vh] w-[40%]  m-0'>
             <Image className=' min-w-full object-cover ' width={40} height={60} priority  src='/assets/signupImg.svg' alt='sign up' />
         </div>
@@ -49,7 +47,7 @@ const SignUp
                 <div className='max-w-[20rem] w-full mt-4'>
                     <Button disabled={handleDisabler()} content='Sign up' />
                 </div>
-                <div className='w-full mt-[2rem] text-center text-[0.9rem] font-medium '>Already have an account? <Link className='text-[#5D5D1C] cursor-pointer' href={'/login'}>Log in</Link></div>
+                <div className='w-full mt-[2rem] text-center text-[0.9rem] font-medium '>Already have an account? <Link className='text-[##E50914] cursor-pointer' href={'/login'}>Log in</Link></div>
 
             </div>
         </div>

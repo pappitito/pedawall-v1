@@ -20,10 +20,10 @@ const Login = () => {
 
     }
   return (
-    <div className='flex w-full '>
-        <head>
-            <title>Log in</title>
-        </head>
+    <div className='flex w-full bg-white h-screen overflow-auto '>
+        <title>Log In</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
+
         <div className='hidden sm:flex min-h-[100vh] w-[40%]  m-0'>
             <Image className=' min-w-full object-cover ' width={40} height={60} priority  src='/assets/loginImg.svg' alt='sign up' />
         </div>
@@ -46,7 +46,7 @@ const Login = () => {
                 <div className='max-w-[20rem] w-full mt-4'>
                     <Button disabled={handleDisabler()} content='Sign up' />
                 </div>
-                <div className='w-full mt-[2rem] text-center text-[0.9rem] font-medium '>Don't have an account? <Link className='text-[#5D5D1C] cursor-pointer' href={'/signup'}>Sign up</Link></div>
+                <div className='w-full mt-[2rem] text-center text-[0.9rem] font-medium '>Don't have an account? <Link className='text-[#E50914] cursor-pointer' href={'/signup'}>Sign up</Link></div>
             </div>
         </div>
     </div>
