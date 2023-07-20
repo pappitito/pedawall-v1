@@ -21,7 +21,7 @@ const Validator = ({text, validateSetter}: ValidatorProps) => {
         }
         else {
             validateSetter(false)
-            return <div className='text-[#E50914]'>Weak paswword</div>
+            return <div className='text-[#E50914]'>Weak password</div>
         }
     }
   return (
