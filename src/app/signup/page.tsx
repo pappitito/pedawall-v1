@@ -47,7 +47,7 @@ const SignUp
                 <div className='max-w-[20rem] w-full mt-4'>
                     <Button disabled={handleDisabler()} content='Sign up' />
                 </div>
-                <div className='w-full mt-[2rem] text-center text-[0.9rem] font-medium '>Already have an account? <Link className='text-[##E50914] cursor-pointer' href={'/login'}>Log in</Link></div>
+                <div className='w-full mt-[2rem] text-center text-[0.9rem] font-medium '>Already have an account? <Link className='text-[#E50914] cursor-pointer' href={'/login'}>Log in</Link></div>
 
             </div>
         </div>
