@@ -5,6 +5,8 @@ import Header from '@/containers/Header'
 import EducationUltraMuros from '@/containers/EducationUltraMuros'
 import ExploreByCategory from '@/containers/ExploreByCategory'
 import Vision from '@/containers/Vision'
+import Footer from '@/containers/Footer'
+import TopCourses from '@/containers/TopCourses'
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
         <EducationUltraMuros/>
         <ExploreByCategory />
         <Vision />
+        <TopCourses/>
+        <Footer/>
       
     </main>
   )

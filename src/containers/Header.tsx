@@ -14,7 +14,7 @@ const Header = () => {
     }
 
   return (
-    <div className='flex sticky w-[100vw] bg-white justify-between p-3'>
+    <div className='flex sticky w-full bg-white justify-between p-3'>
        <img className='w-[2.2rem] ' src='/assets/logo.svg' alt='logo' />
        <div className='flex w-[80%] justify-between  gap-3'>
        <form onSubmit={handleSearchSubmit} className='flex gap-3 w-[100%]'>
