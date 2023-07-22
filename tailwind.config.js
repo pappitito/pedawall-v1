@@ -14,7 +14,7 @@ module.exports = {
         'md': '830px',    // Custom medium screen size
         'lg': '1024px', 
         'mlg': '1090px',  // Custom large screen size
-        'blg': '1150px',
+        'blg': '1140px',
         'elg': '1204px',
         'sxl': '1260px',
         'xl': '1280px',   // Custom extra large screen size
