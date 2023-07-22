@@ -10,7 +10,7 @@ const CourseCard = ({title, type, coverImg, level, school, rating, duration} : C
             </div>
             <div className='p-[0.4rem] pl-4 pr-4 flex ml-6  rounded-[0.4rem] m-auto mt-[-1rem] text-[0.8rem] z-10  text-white bg-[#4B6F21]'>{type}</div>
             <div className='flex flex-col mt-[0.5rem] justify-between h-full   w-full text-[0.8rem] p-4 gap-4'>
-                <h1 className='text-[0.96rem] max-w-[100%] flex flex-col text-start items-start overflow-hidden text-ellipsis font-semibold'>{title}</h1>
+                <h1 className='text-[0.96rem] max-w-[80%] flex flex-col text-start items-start overflow-hidden text-ellipsis font-semibold'>{title}</h1>
                <div className='flex flex-col '>
                <div className='flex items-center w-full  justify-between'>
                     <p className='font-semibold max-w-[12rem] whitespace-nowrap overflow-hidden text-ellipsis'>By: {school}</p>
@@ -32,8 +32,8 @@ const CourseCard = ({title, type, coverImg, level, school, rating, duration} : C
                 <div className=' flex  text-[0.8rem] z-10 font-semibold  text-[#4B6F21]'>{type}</div>
                 </div>
                 
-                <div className='max-w-[5rem] max-h-[5rem]'>
-                    <img className='w-[100%] rounded-[0.9rem] h-[100%] object-cover' src={coverImg} alt="cover image" />
+                <div className=''>
+                    <img className='w-[100%] max-w-[5rem] min-w-[5rem] min-h-[4rem] max-h-[4rem] rounded-[0.9rem] h-[100%] object-cover' src={coverImg} alt="cover image" />
                  </div>
                  
                 
