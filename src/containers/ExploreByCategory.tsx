@@ -9,7 +9,7 @@ interface CategoryCardProps {
 }
 const CategoryCard = ({icon, title, subtitle, count}:CategoryCardProps) =>{
     return (
-        <div className='flex flex-col md:min-h-[17.4rem] bg-white p-6 w-full rounded-[1.2rem] md:max-w-[15.4rem]'>
+        <div className='flex flex-col md:min-h-[17.4rem] bg-white hover:bg-[#E50914] cursor-pointer duration-500 hover:text-white hover:scale-105  p-6 w-full rounded-[1.2rem] md:max-w-[15.4rem]'>
         <div className='flex justify-between items-center mb-2'>
             <img className='w-[1.8rem]' src={icon} alt="icon" />
             <div className='text-[#4B6F21]'>{count}+</div>

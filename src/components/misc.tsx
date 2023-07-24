@@ -19,7 +19,7 @@ export const dummyCourses : CourseProp[] = [
         coverImg: 'assets/courseImg.svg'
     },
     {
-        title: 'Professional Certificate In Social Media Marketing and content strategy development',
+        title: 'Professional Certificate In Social Media Marketing strategy development',
         school: "Cobra kai",
         level: 'intermediate',
         type: 'proffessional',

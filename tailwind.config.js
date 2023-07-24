@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       screens: {
         'xs': '430px',    // Custom extra small screen size
-        'xsm': '600px',
+        'xsm': '550px',
         'sm': '700px',    // Custom small screen size
         'md': '830px',    // Custom medium screen size
         'lg': '1024px', 
