@@ -43,6 +43,8 @@ const Header = () => {
 
   return (
     <div className='flex sticky top-0 w-full z-[20] bg-white items-center justify-between p-3'>
+          <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
+
        {showSearch?
             <div className='flex w-full p-[0.18rem] items-center gap-2'>
                 <div className='w-full'>
