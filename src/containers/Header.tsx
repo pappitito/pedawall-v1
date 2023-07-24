@@ -47,6 +47,7 @@ const Header = () => {
 
        {showSearch?
             <div className='flex w-full p-[0.18rem] items-center gap-2'>
+                <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
                 <div className='w-full'>
                     <form className='flex w-full'>
                         <input ref={inputRef} className='text-[0.9rem] p-[0.5rem] w-full outline-none border-[1.5px] border-r-[0px] border-gray-400  rounded-l-[0.64rem]' type="text" placeholder='what do you want to learn' />
