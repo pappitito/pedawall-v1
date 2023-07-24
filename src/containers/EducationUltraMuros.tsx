@@ -24,7 +24,7 @@ const EducationUltraMuros = () => {
     
 
   return (
-    <div className='flex flex-col p-[2rem] pt-[5rem] xsm:p-[5rem] w-full'>
+    <div className='flex flex-col p-[2rem]  xsm:pt-[4.5rem] xsm:p-[5rem] w-full'>
         <div className='flex flex-col  sm:flex-row justify-between  items-center w-full'>
             <div className='flex  flex-col'>
                 <div className='flex flex-col text-[1.9rem] xs:text-[2.2rem] xsm:text-[2.5rem] lg:text-[3rem] font-bold'>

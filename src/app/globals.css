@@ -63,3 +63,6 @@ body{
 .myCenter4{
   margin: 0 auto;
 }
+.MuiPaper-root {
+  outline: none;
+}
