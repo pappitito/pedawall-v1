@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 const EducationUltraMuros = () => {
     const FADE_INTERVAL_MS = 2100
     const [fader, setFader] = useState('fade-in')
-    const [faderWord, setFaderWord] = useState('Ultra Muros`')
+    const [faderWord, setFaderWord] = useState('Ultra Muros')
     useEffect(()=>{
         const fadeTimeout = setInterval(() => {
             fader === 'fade-in' ? setFader('fade-out') : setFader('fade-in')
