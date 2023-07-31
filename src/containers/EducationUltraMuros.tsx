@@ -16,7 +16,7 @@ const EducationUltraMuros = () => {
     },[fader])
     useEffect(()=>{
         const fadeTimeout = setInterval(() => {
-            faderWord === 'Ultra Muros`' ? setFaderWord('Beyond Walls') : setFaderWord('Ultra Muros`')
+            faderWord === 'Ultra Muros' ? setFaderWord('Beyond Walls') : setFaderWord('Ultra Muros')
           }, 4200)
       
           return () => clearInterval(fadeTimeout)
