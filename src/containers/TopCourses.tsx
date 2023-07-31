@@ -1,9 +1,10 @@
 import { CourseProp, dummyCourses } from '@/components/misc'
+import Link from 'next/link'
 import React from 'react'
 
-const CourseCard = ({title, type, coverImg, level, school, rating, duration} : CourseProp) => {
+const CourseCard = ({id, title, type, coverImg, level, school, rating, duration} : CourseProp) => {
     return (
-        <div className='flex'>
+        <Link href={`/courses/${type?.toLowerCase()}/${title.replace(/[^\w]+/g, '-').toLowerCase()}-${id?.slice(0,5)}`}  className='flex'>
             <div className='hidden blg:flex flex-col w-[100%] max-w-[19rem] min-w-[15rem] rounded-[0.9rem] cursor-pointer duration-300 hover:scale-105  bg-white '>
             <div className='w-full h-[10rem] object-cover'>
                 <img className='w-[100%] rounded-t-[0.9rem] h-[100%] object-cover' src={coverImg} alt="cover image" />
@@ -50,7 +51,7 @@ const CourseCard = ({title, type, coverImg, level, school, rating, duration} : C
                  </div>
                </div>
             </div>
-        </div>
+        </Link>
     )
 }
 const fourTop = dummyCourses.slice(0,4)
@@ -59,8 +60,10 @@ const TopCourses = () => {
     <div className='flex flex-col w-full p-[1.5rem] md:p-[5rem]'>
         <div className='text-[1.5rem] sm:text-[2rem] p-3 font-bold'>Top Courses</div>
           <div className='grid grid-cols-1 sm:grid-cols-2 blg:grid-cols-4 myCenter4 justify-center gap-5 '>
-            {dummyCourses.map(({title, type, coverImg, level, school, rating, duration})=>(
+            {dummyCourses.map(({id, title, type, coverImg, level, school, rating, duration})=>(
+               
                 <CourseCard 
+                    id={id}
                     title={title} 
                     type={type} 
                     coverImg={coverImg}
