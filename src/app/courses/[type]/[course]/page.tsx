@@ -47,8 +47,8 @@ export default function Page({params}: any) {
                     <div className="flex flex-col">
                         <div className="text-[2rem] hidden xs:flex   font-serif font-semibold">${courseDetails?.price}</div>
                         <h2 className="xs:mt-6 mt-3 font-semibold">Inludes:</h2>
-                        <div className="flex gap-2 mt-3 text-[0.8rem] leading-[0.9rem] flex-row xs:flex-col xs:gap-2 ">
-                            <div className="flex gap-3  flex-col">
+                        <div className="flex gap-3 mt-3 text-[0.8rem] leading-[0.9rem] flex-row xs:flex-col xs:gap-3 ">
+                            <div className="flex gap-2  flex-col">
                                 <div>20 Hours of on demand videos</div>
                                 <div>full time life access</div>
                             </div>
