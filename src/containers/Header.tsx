@@ -105,11 +105,11 @@ const Header = () => {
                 <div onClick={()=>setMenuOpen(false)} className='text-[#E50914] cursor-pointer text-[3rem] flex'>
                     <CloseIcon className='!w-[2.1rem] !h-[2.1rem]'/>
                 </div>
-                <div className='flex flex-col gap-4 mt-[4rem] items-center '>
-                    <Link className='w-[6.5rem] md:w-[8rem] ' href='/login'>
+                <div className='flex flex-col gap-0 mt-[2.2rem] items-center '>
+                    <Link className='w-full p-3 ' href='/login'>
                         <Button isOutlined content='Login'  />
                     </Link>
-                    <Link className=' w-[6.5rem] md:w-[8rem]' href='/signup'>
+                    <Link className=' w-full p-3 mt-[-0.9rem] ' href='/signup'>
                         <Button  content='Signup'  />
                     </Link>
                 </div>

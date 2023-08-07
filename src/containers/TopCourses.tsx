@@ -2,7 +2,7 @@ import { CourseProp, dummyCourses } from '@/components/misc'
 import Link from 'next/link'
 import React from 'react'
 
-const CourseCard = ({id, title, type, coverImg, level, school, rating, duration} : CourseProp) => {
+export const CourseCard = ({id, title, type, coverImg, level, school, rating, duration} : CourseProp) => {
     return (
         <Link href={`/courses/${type?.toLowerCase()}/${title.replace(/[^\w]+/g, '-').toLowerCase()}-${id?.slice(0,5)}`}  className='flex'>
             <div className='hidden blg:flex flex-col w-[100%] max-w-[19rem] min-w-[15rem] rounded-[0.9rem] cursor-pointer duration-300 hover:scale-105  bg-white '>
