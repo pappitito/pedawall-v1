@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        'bxs': '324px',
         'xs': '430px',    // Custom extra small screen size
         'xsm': '550px',
         'sm': '700px',    // Custom small screen size

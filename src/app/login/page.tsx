@@ -20,18 +20,16 @@ const Login = () => {
 
     }
   return (
-    <div className='flex w-full bg-white h-screen overflow-auto '>
+    <div className='flex w-full bg-white h-screen items-center overflow-auto '>
         <title>Log In</title>
         <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
 
-        <div className='hidden sm:flex min-h-[100vh] w-[40%]  m-0'>
-            <Image className=' min-w-full object-cover ' width={40} height={60} priority  src='/assets/loginImg.svg' alt='sign up' />
-        </div>
-        <div className='flex flex-col w-full p-4 sm:w-[60%] items-center'>
-            <div className='flex gap-3 items-center'>
+        
+        <div className='flex flex-col w-full p-4 mt-[-9rem]  items-center'>
+            <Link href={'/'} className='flex cursor-pointer gap-3 items-center'>
                 <img className='w-[2.2rem]' src='/assets/logo.svg' alt='logo' />
                 <h4 className='text-[1.3rem]'>Pedawalls</h4>
-            </div>
+            </Link>
             <div className=' flex flex-col w-full pl-2 pr-2 max-w-[31rem] gap-5 items-center mt-[9vh] lg:mt-[12vh]'>
                 <h1 className='text-[1.6rem] font-semibold text-center mb-4 '>Welcome Back</h1>
                 <Input value={email} onChange={(e: any)=> setEmail(e.target.value)}  label='Email Address' />
@@ -48,6 +46,10 @@ const Login = () => {
                 </div>
                 <div className='w-full mt-[2rem] text-center text-[0.9rem] font-medium '>Don't have an account? <Link className='text-[#E50914] cursor-pointer' href={'/signup'}>Sign up</Link></div>
             </div>
+        </div>
+        <div className='hidden sm:flex flex-col items-center pr-12 mt-[-6rem]  w-full '>
+            <img className=' w-full max-w-[41rem] '   src='/assets/work.svg' alt='sign up' />
+            <a className='text-[0.62rem] text-gray-400 italic w-full text-center' href="https://storyset.com/online">Online illustrations by Storyset</a>
         </div>
     </div>
   )

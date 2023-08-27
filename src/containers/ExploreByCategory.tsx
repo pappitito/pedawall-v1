@@ -1,4 +1,5 @@
 import Button from '@/components/Button'
+import Link from 'next/link'
 import React from 'react'
 interface CategoryCardProps {
     key?: number
@@ -61,7 +62,7 @@ const ExploreByCategory = () => {
             })}
         </div>
         <div className='w-[12rem] mt-10 myCenter3'>
-            <Button content='Explore Courses'/>
+            <Link href={'/explore'}><Button content='Explore Courses'/></Link>
         </div>
     </div>
   )
