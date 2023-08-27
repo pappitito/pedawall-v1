@@ -1,11 +1,19 @@
+"use client"
 import { CourseProp, dummyCourses } from '@/components/misc'
 import Link from 'next/link'
 import React from 'react'
 
+
+import dynamic from 'next/dynamic';
+import Carousel from 'react-multi-carousel';
+import "react-multi-carousel/lib/styles.css";
+
+
+
 export const CourseCard = ({id, title, type, coverImg, level, school, rating, duration} : CourseProp) => {
     return (
-        <Link href={`/courses/${type?.toLowerCase()}/${title.replace(/[^\w]+/g, '-').toLowerCase()}-${id?.slice(0,5)}`}  className='flex'>
-            <div className='hidden blg:flex flex-col w-[100%] max-w-[19rem] min-w-[15rem] rounded-[0.9rem] cursor-pointer duration-300 hover:scale-105  bg-white '>
+        <Link href={`/courses/${type?.toLowerCase()}/${title.replace(/[^\w]+/g, '-').toLowerCase()}-${id?.slice(0,5)}`}   className='flex h-full'>
+            <div className='hidden blg:flex flex-col w-[100%] max-w-[19rem] min-w-[15rem] h-full rounded-[0.9rem] cursor-pointer duration-300 hover:scale-105  bg-white '>
             <div className='w-full h-[10rem] object-cover'>
                 <img className='w-[100%] rounded-t-[0.9rem] h-[100%] object-cover' src={coverImg} alt="cover image" />
             </div>
@@ -34,7 +42,7 @@ export const CourseCard = ({id, title, type, coverImg, level, school, rating, du
                 </div>
                 
                 <div className=''>
-                    <img className='w-[100%] max-w-[5rem] xsm:max-w-[6rem] min-w-[5rem] xsm:min-w-[6rem] min-h-[4rem] max-h-[4rem] rounded-[0.9rem] h-[100%] object-cover' src={coverImg} alt="cover image" />
+                    <img className='w-[100%] max-w-[6rem] xsm:max-w-[6rem] min-w-[6rem] xsm:min-w-[6rem] min-h-[4rem] max-h-[5.7rem] rounded-[0.5rem] h-[100%] object-cover' src={coverImg} alt="cover image" />
                  </div>
                  
                 
@@ -56,10 +64,34 @@ export const CourseCard = ({id, title, type, coverImg, level, school, rating, du
 }
 const fourTop = dummyCourses.slice(0,4)
 const TopCourses = () => {
+
+ 
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+  const carouselSettings = {
+    responsive,
+    draggable: true, // Enable dragging
+    keyBoardControl: true, // Enable keyboard navigation
+    
+  };
+
   return (
     <div className='flex flex-col w-full p-[1.5rem] md:p-[5rem]'>
         <div className='text-[1.5rem] sm:text-[2rem] p-3 font-bold'>Top Courses</div>
-          <div className='grid grid-cols-1 sm:grid-cols-2 blg:grid-cols-4 myCenter4 justify-center gap-5 '>
+
+           <div className='grid grid-cols-1 sm:grid-cols-2 blg:grid-cols-4 myCenter4 justify-center gap-5 '>
             {dummyCourses.map(({id, title, type, coverImg, level, school, rating, duration})=>(
                
                 <CourseCard 
@@ -73,7 +105,8 @@ const TopCourses = () => {
                     duration={duration}
                     />
             ))}
-          </div>
+          </div> 
+         
         
     </div>
   )

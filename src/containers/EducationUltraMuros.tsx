@@ -26,7 +26,7 @@ const EducationUltraMuros = () => {
   return (
     <div className='flex flex-col p-[2rem] mt-[4.47rem]  xsm:pt-[4.5rem] xsm:p-[5rem] w-full'>
         <div className='flex flex-col  sm:flex-row justify-between  items-center w-full'>
-            <div className='flex  flex-col'>
+            <div className='flex w-full  flex-col'>
                 <div className='flex flex-col text-[1.9rem] xs:text-[2.2rem] xsm:text-[2.5rem] lg:text-[3rem] font-bold'>
                     <div className='text-[#4B6F21]'>Education <span className={` ${fader}`}>{faderWord}</span></div>
                     <div className='w-[90%]'> 
@@ -43,7 +43,11 @@ const EducationUltraMuros = () => {
              
                 </div>
             </div>
-            <img className='w-full min-w-[16rem] max-w-[22rem] lg:max-w-[30rem] bg-[#839098] rounded-[50%]' src="/assets/eduImg.svg" alt="" />
+            <div className='flex flex-col w-full'>
+                <img className='w-full max-w-[40rem] sm:pt-[4rem] m-auto' src="/assets/Online learning-pana.svg" alt="" />
+                <a className='text-[0.62rem] text-gray-400 mt-4 italic w-full pb-[3rem] text-center pr-8' href="https://storyset.com/online">Online illustrations by Storyset</a>
+            </div>
+           {/*  <img className='w-full min-w-[16rem] max-w-[22rem] lg:max-w-[30rem] bg-[#839098] rounded-[50%]' src="/assets/eduImg.svg" alt="" /> */}
         </div>
         <div className='flex mt-[7rem] myCenter flex-col md:flex-row  md:justify-around gap-[3rem] flex-wrap'>
             <div className='flex items-center gap-6'>

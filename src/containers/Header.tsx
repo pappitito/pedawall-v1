@@ -8,10 +8,27 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import Drawer from '@mui/material/Drawer'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Badge from '@mui/material/Badge';
 
+// Create a custom theme with primary and secondary colors
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#E50914', // Set your primary color here
+    },
+    secondary: {
+      main: '#e74c3c', // Set your secondary color here
+    },
+  },
+});
 
+type HeaderProps = {
+    hasNoSearch?: boolean;
+}
 
-const Header = () => {
+const Header = ({hasNoSearch}: HeaderProps) => {
     const [searchForm, setSearchForm] = useState({searchContent: ''})
     const [showSearch, setShowSearch] = useState(false)
     const [menuOpen, setMenuOpen] = useState(false)
@@ -60,38 +77,58 @@ const Header = () => {
             </div>
         : 
        <div className='w-full flex items-center justify-between'>
-        <img className='w-[2.2rem] hidden xsm:flex ' src='/assets/logo.svg' alt='logo' />
-       <div className='flex w-full sm:w-[90%] items-center md:w-[80%] justify-end sm:justify-between  gap-3'>
-       <div className='hidden pl-5 pr-5 sm:pl-0 sm:pr-0 xsm:flex w-full ml-2 max-w-[42rem] '>
-            <Searchbar />
-       </div>
-       <div onClick={()=>setMenuOpen(true)} className='text-[#E50914] text-[3rem] hidden xsm:flex sm:hidden'>
+        <Link href={'/'} className='flex items-center gap-4'>
+             <img className='w-[2.2rem] hidden xsm:flex ' src='/assets/logo.svg' alt='logo' />
+            <h1 className='text-[1.4rem] hidden md:flex text-black'>Pedawalls</h1>
+        </Link>
+       <div className='flex w-full sm:w-[90%] items-center md:w-[80%] justify-end  sm:justify-between  gap-3'>
+            {!hasNoSearch && 
+                <div className='hidden pl-5 pr-5 sm:pl-0 sm:pr-0 xsm:flex w-full ml-2 max-w-[42rem] '>
+                    <Searchbar />
+                 </div>}
+            <div onClick={()=>setMenuOpen(true)} className='text-[#E50914] text-[3rem] hidden xsm:flex sm:hidden'>
                  <MenuIcon className='!w-[2.1rem] !h-[2.1rem]'/>
             </div>
-       <div className='flex xsm:hidden gap-2 w-full  items-center justify-between'>
-          <div onClick={()=> {
-                focus() 
-                setShowSearch(true)
-                }
-                } className='text-[#E50914] text-[3rem] cursor-pointer flex xsm:hidden'>
-                <SearchIcon className='!w-[2.1rem] !h-[2.1rem]' />
-            </div>
-            <img className='w-[2.2rem] flex xsm:hidden' src='/assets/logo.svg' alt='logo' />
-           
-            <div onClick={()=>setMenuOpen(true)} className='text-[#E50914] text-[3rem] flex sm:hidden'>
-                 <MenuIcon className='!w-[2.1rem] !h-[2.1rem]'/>
-            </div>
+            <div className='flex xsm:hidden gap-2 w-full  items-center justify-between'>
+                {!hasNoSearch && 
+                    <div onClick={()=> {
+                        focus() 
+                        setShowSearch(true)
+                        }
+                        } 
+                    className='text-[#E50914] text-[3rem] cursor-pointer flex xsm:hidden'>
+                        <SearchIcon className='!w-[2.1rem] !h-[2.1rem]' />
+                    </div>}
+                    <Link href={'/'}><img className='w-[2.2rem] flex xsm:hidden' src='/assets/logo.svg' alt='logo' /></Link>
+
+                        
+                        
+                   <div className='flex items-center'>
+                   <Link href={'/cart'} className='cursor-pointer'>
+                    <Badge badgeContent={3} color='error' className='mr-[1.2rem] text-gray-800' >
+                        <ShoppingCartIcon/>
+                     </Badge>
+                </Link>      
+                <div onClick={()=>setMenuOpen(true)} className='text-[#E50914] text-[3rem] flex sm:hidden'>
+                     <MenuIcon className='!w-[2.1rem] !h-[2.1rem]'/>
+                </div>
+                   </div>
              
-       </div>
-       <div className='hidden sm:flex  gap-3'>
-            <Link className='w-[6.5rem] md:w-[8rem] ' href='/login'>
-                <Button isOutlined content='Login'  />
-            </Link>
-             <Link className=' w-[6.5rem] md:w-[8rem]' href='/signup'>
-                <Button  content='Signup'  />
-             </Link>
+            </div>
+            <div className='hidden sm:flex items-center justify-end w-full  gap-3'>
+                <Link href={'/cart'} className='cursor-pointer'>
+                    <Badge badgeContent={3} color='error' className='mr-[1rem] text-gray-800' >
+                        <ShoppingCartIcon/>
+                     </Badge>
+                </Link>
+                <Link className='w-[6.5rem] md:w-[8rem] ' href='/login'>
+                    <Button isOutlined content='Login'  />
+                </Link>
+                 <Link className=' w-[6.5rem] md:w-[8rem]' href='/signup'>
+                    <Button  content='Signup'  />
+                 </Link>
              
-       </div>
+            </div>
        </div>
        </div>
        }
