@@ -7,6 +7,8 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import SignUp from '../signup/page'
 import Head from 'next/head'
+import { Raleway } from 'next/font/google'
+ const raleway = Raleway({style: 'normal', subsets: ['cyrillic-ext']})
 
 const Login = () => {
     const [keepLogged, setKeepLogged] = useState(false)
@@ -28,7 +30,7 @@ const Login = () => {
         <div className='flex flex-col w-full p-4 mt-[-9rem]  items-center'>
             <Link href={'/'} className='flex cursor-pointer gap-3 items-center'>
                 <img className='w-[2.2rem]' src='/assets/logo.svg' alt='logo' />
-                <h4 className='text-[1.3rem]'>Pedawalls</h4>
+                <h4 className='text-[1.3rem] font-semibold'><div className={raleway.className}>Pedawalls</div></h4>
             </Link>
             <div className=' flex flex-col w-full pl-2 pr-2 max-w-[31rem] gap-5 items-center mt-[9vh] lg:mt-[12vh]'>
                 <h1 className='text-[1.6rem] font-semibold text-center mb-4 '>Welcome Back</h1>
@@ -42,7 +44,7 @@ const Login = () => {
                     <p className='redlink font-medium text-[0.8rem]'>forgot password?</p>
                 </div>
                 <div className='max-w-[20rem] w-full mt-4'>
-                    <Button disabled={handleDisabler()} content='Sign up' />
+                    <Button disabled={handleDisabler()} content='Log In' />
                 </div>
                 <div className='w-full mt-[2rem] text-center text-[0.9rem] font-medium '>Don't have an account? <Link className='text-[#E50914] cursor-pointer' href={'/signup'}>Sign up</Link></div>
             </div>

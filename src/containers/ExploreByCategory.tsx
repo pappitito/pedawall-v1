@@ -16,7 +16,7 @@ const CategoryCard = ({icon, title, subtitle, count}:CategoryCardProps) =>{
             <div className='text-[#4B6F21]'>{count}+</div>
         </div>
         <div className='text-[1.3rem] font-semibold mb-1'>{title}</div>
-        <div className='text-[0.9rem]'>{subtitle}</div>
+        <div className='text-[0.95rem]'>{subtitle}</div>
 
     </div>
     )

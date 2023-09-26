@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { CourseCard } from "@/containers/TopCourses";
 import Footer from "@/containers/Footer";
+import GeneralLayout from "@/layouts/GeneralLayout";
 
 export default function Page({params}: any) {
     const splitParameter = (text : string) =>{
@@ -31,9 +32,8 @@ export default function Page({params}: any) {
     const similarCourses  = dummyCourses.filter((item)=> item.type === courseDetails?.type)
 
     return(
-        <div className="flex flex-col w-full">
-            <Header/>
-            <div className="flex flex-col text-white w-full bg-[#29303B] mt-[3rem] pt-[4rem] p-6 lg:p-[4rem]">
+        <GeneralLayout className="flex flex-col w-full">
+            <div className="flex flex-col text-white w-full bg-[#29303B]  pt-[4rem] p-6 lg:p-[4rem]">
                 <h1 className=" text-[1.5rem] md:text-[2rem] md:w-[70%] font-bold">{courseDetails?.title}</h1>
                 <p className="text-[0.9rem] md:text-[1rem] mt-2">{courseDetails?.subtitle}</p>
                 <div className="flex items-center md:w-[45%] flex-wrap  text-[0.8rem] mt-5 gap-3">
@@ -50,13 +50,13 @@ export default function Page({params}: any) {
                     <div className="flex gap-3 items-end  w-full xs:max-w-[42%] md:max-w-[14rem] xs:flex-col">
                             <img className="w-[100%] xs:w-full h-[8rem] xs:h-[7.4rem] object-cover rounded-[0.8rem] " src={courseDetails?.coverImg} alt="course image" />
                             <div className="flex w-full flex-col gap-2">
-                            <div className="text-[1.8rem] w-full flex xs:hidden items-center justify-center mb-0  font-serif font-semibold">${courseDetails?.price || 0.00}</div>
+                            <div className="text-[1.8rem] w-full flex xs:hidden items-center justify-center mb-0  font-bold">${courseDetails?.price || 0.00}</div>
                                 <div className="w-full p-[0.6rem] text-center rounded-lg text-[#7EB200] border-[#7EB200] text-[0.8rem] border-[1px] ">Add to cart</div>
                                 <div className="w-full p-[0.6rem] text-center rounded-lg text-[#CA9500] border-[#CA9500] text-[0.8rem] border-[1px] ">Add to cart</div>
                             </div>
                     </div>
                     <div className="flex flex-col">
-                        <div className="text-[2rem] hidden xs:flex items-center font-serif font-semibold"><span className="">$</span>{courseDetails?.price || 0.00}</div>
+                        <div className="text-[2rem] hidden xs:flex items-center  font-bold"><span className="">$</span>{courseDetails?.price || 0.00}</div>
                         <h2 className="xs:mt-6 mt-3 font-semibold">Inludes:</h2>
                         <div className="flex gap-3 mt-3 text-[0.8rem] leading-[0.9rem] flex-row xs:flex-col xs:gap-3 ">
                             <div className="flex gap-2  flex-col">
@@ -155,6 +155,6 @@ export default function Page({params}: any) {
         
     </div>
             <Footer/>
-        </div>
+        </GeneralLayout>
     )
 }

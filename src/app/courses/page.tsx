@@ -1,7 +1,11 @@
+import GeneralLayout from "@/layouts/GeneralLayout";
+
 export default function Page() {
     return(
         <div>
-            all courses
+            <GeneralLayout>
+                all types
+            </GeneralLayout>
         </div>
     )
 }
