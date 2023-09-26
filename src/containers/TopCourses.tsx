@@ -19,7 +19,7 @@ export const CourseCard = ({id, title, type, coverImg, level, school, rating, du
             </div>
             <div className='p-[0.4rem] pl-4 pr-4 flex ml-6  rounded-[0.4rem] m-auto mt-[-1rem] text-[0.8rem] z-10  text-white bg-[#4B6F21]'>{type}</div>
             <div className='flex flex-col mt-[0.5rem] justify-between h-full   w-full text-[0.8rem] p-4 gap-4'>
-                <h1 className='text-[0.96rem] max-w-[80%] flex flex-col text-start items-start overflow-hidden text-ellipsis font-semibold'>{title}</h1>
+                <h1 className='text-[0.99rem] max-w-[80%] flex flex-col text-start items-start overflow-hidden text-ellipsis font-semibold'>{title}</h1>
                <div className='flex flex-col '>
                <div className='flex items-center w-full  justify-between'>
                     <p className='font-semibold max-w-[12rem] whitespace-nowrap overflow-hidden text-ellipsis'>By: {school}</p>

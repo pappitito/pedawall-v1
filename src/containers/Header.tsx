@@ -11,6 +11,8 @@ import Drawer from '@mui/material/Drawer'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
+import { Raleway } from 'next/font/google'
+ const raleway = Raleway({style: 'normal', subsets: ['cyrillic-ext']})
 
 // Create a custom theme with primary and secondary colors
 const theme = createTheme({
@@ -79,7 +81,7 @@ const Header = ({hasNoSearch}: HeaderProps) => {
        <div className='w-full flex items-center justify-between'>
         <Link href={'/'} className='flex items-center gap-4'>
              <img className='w-[2.2rem] hidden xsm:flex ' src='/assets/logo.svg' alt='logo' />
-            <h1 className='text-[1.4rem] hidden md:flex text-black'>Pedawalls</h1>
+            <h1 className='text-[1.4rem] font-semibold hidden md:flex text-black'><div className={raleway.className}>Pedawalls</div></h1>
         </Link>
        <div className='flex w-full sm:w-[90%] items-center md:w-[80%] justify-end  sm:justify-between  gap-3'>
             {!hasNoSearch && 

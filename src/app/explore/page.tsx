@@ -3,15 +3,15 @@ import { dummyCourses } from "@/components/misc"
 import Footer from "@/containers/Footer"
 import Header from "@/containers/Header"
 import { CourseCard } from "@/containers/TopCourses"
+import GeneralLayout from "@/layouts/GeneralLayout"
 
 const similarCourses  = dummyCourses.filter((item)=> item.level === 'beginner')
 
 
 const Explore = () => {
   return (
-    <main className="">
-        <Header hasNoSearch />
-        <section className="flex flex-col sm:flex-row p-[1.5rem] pt-[3rem] xs:p-[3rem] mt-[4.47rem] items-center  xsm:pt-[4.5rem] lg:p-[5rem]">
+    <GeneralLayout searchless>
+        <section className="flex flex-col sm:flex-row p-[1.5rem] pt-[3rem] xs:p-[3rem]  items-center  xsm:pt-[4.5rem] lg:p-[5rem]">
           <div className="w-full flex flex-col lg:p-[1rem]">
             <h1 className="text-[2rem] bxs:text-[2.4rem] sm:text-[3rem] font-semibold w-full lg:w-[70%] mb-[3rem]">What would you like to learn today</h1>
             <div className="w-full">
@@ -40,7 +40,7 @@ const Explore = () => {
         
     </section>
     <Footer/>
-    </main>
+    </GeneralLayout>
   )
 }
 

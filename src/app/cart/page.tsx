@@ -3,6 +3,7 @@ import Header from '@/containers/Header'
 import React from 'react'
 import ClearIcon from '@mui/icons-material/Clear';
 import Button from '@/components/Button';
+import Link from 'next/link';
 
 const page = () => {
   return (
@@ -20,7 +21,7 @@ const page = () => {
                                     <p className='font-semibold text-[1rem] '>{title}</p>
                                     <p>by: {school}</p>
                                     <p>{type}</p>
-                                    <p className='text-[1.3rem] font-serif font-semibold'>${price}</p>
+                                    <p className='text-[1.3rem]  font-bold'>${price}</p>
                                 </div>
                             </div>
                             <div className='w-full flex justify-end sm:justify-normal sm:w-auto '>
@@ -52,7 +53,7 @@ const page = () => {
                         <p className='font-semibold text-lg'>$109</p>
                     </div>
                     <div className='w-[12rem] p-5'>
-                        <Button content={'Proceed'} />
+                        <Link href={'/cart/payment-checkout'}><Button content={'Proceed'} /></Link>
                     </div>
 
                 </div>

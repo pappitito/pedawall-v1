@@ -6,7 +6,6 @@ body{
   margin: 0 auto;
   background-color: #F2F1F1;
   overflow: auto;
-  font-family: 'Poppins', sans-serif;
 
 }
 .linkSpan{
@@ -65,4 +64,7 @@ body{
 }
 .MuiPaper-root {
   outline: none;
+}
+.ant-switch-checked{
+ background-color: #4B6F21 !important;
 }

@@ -10,7 +10,7 @@ const Vision = () => {
                     <img className='w-[2.3rem]' src="/assets/bullseye.svg" alt="" />
                     <div className='flex flex-col gap-3'>
                         <h1 className='text-[1.3rem]  font-semibold mb-1'>Our Mission</h1>
-                        <p className='text-[0.9rem]'>Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia
+                        <p className='text-[0.95rem]'>Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia
                             consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                     </div>
             </div>
@@ -18,7 +18,7 @@ const Vision = () => {
                     <img className='w-[2.2rem]' src="/assets/info.svg" alt="" />
                     <div className='flex flex-col gap-3'>
                         <h1 className='text-[1.3rem]  font-semibold mb-1'>Who we are</h1>
-                        <p className='text-[0.9rem]'>Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia
+                        <p className='text-[0.95rem]'>Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia
                             consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                     </div>
             </div>
@@ -26,7 +26,7 @@ const Vision = () => {
                     <img className='w-[2.3rem]' src="/assets/binoculars.svg" alt="" />
                     <div className='flex flex-col gap-3'>
                         <h1 className='text-[1.3rem]  font-semibold mb-1'>Our Vision</h1>
-                        <p className='text-[0.9rem]'>Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia
+                        <p className='text-[0.95rem]'>Amet minim mollit non deserunt ullamco est sit  aliqua dolor do amet sint. Velit officia
                             consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                     </div>
             </div>
