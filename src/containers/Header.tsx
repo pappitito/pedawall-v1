@@ -61,7 +61,7 @@ const Header = ({hasNoSearch}: HeaderProps) => {
     }
 
   return (
-    <div className='flex fixed top-0 w-full z-[20] bg-white items-center justify-between pt-2 pb-2 p-3'>
+    <div className='flex fixed top-0 w-full z-[20] bg-white items-center justify-between p-3 pt-2 pb-2  xsm:p-3'>
           <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
 
        {showSearch?
