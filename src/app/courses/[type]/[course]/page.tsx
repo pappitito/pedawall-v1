@@ -33,7 +33,7 @@ export default function Page({params}: any) {
 
     return(
         <GeneralLayout className="flex flex-col w-full">
-            <div className="flex flex-col text-white w-full bg-[#29303B]  pt-[4rem] p-6 lg:p-[4rem]">
+            <div className="flex flex-col text-white w-full bg-[#29303B]  pt-[2.5rem] p-6 lg:p-[4rem]">
                 <h1 className=" text-[1.5rem] md:text-[2rem] md:w-[70%] font-bold">{courseDetails?.title}</h1>
                 <p className="text-[0.9rem] md:text-[1rem] mt-2">{courseDetails?.subtitle}</p>
                 <div className="flex items-center md:w-[45%] flex-wrap  text-[0.8rem] mt-5 gap-3">
@@ -96,7 +96,7 @@ export default function Page({params}: any) {
                 <h1 className="text-[1.5rem] mt-10 mb-4 font-semibold">Tutors</h1>
                 <div className="flex mt-5 flex-wrap gap-6">
                    {courseDetails?.tutors?.map((tutor)=>(
-                    <div className="flex md:w-[48%] items-start gap-[0.8rem]">
+                    <div key={tutor.name} className="flex md:w-[48%] items-start gap-[0.8rem]">
                         <Avatar className="mt-[0.5rem] h-[3rem] w-[3rem] xsm:h-[3.5rem] xsm:w-[3.5rem]" src={tutor.image} />
                         <div className="flex-col flex gap-2">
                             <div className="text-[1.4rem] font-semibold">{tutor.name}</div>

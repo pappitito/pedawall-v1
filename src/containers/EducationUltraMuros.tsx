@@ -27,7 +27,7 @@ const EducationUltraMuros = () => {
     <div className='flex flex-col p-[2rem]   xsm:pt-[4.5rem] xsm:p-[5rem] w-full'>
         <div className='flex flex-col  sm:flex-row justify-between  items-center w-full'>
             <div className='flex w-full  flex-col'>
-                <div className='flex flex-col text-[1.9rem] xs:text-[2.2rem] xsm:text-[2.5rem] lg:text-[3.2rem] font-bold'>
+                <div className='flex flex-col text-[1.9rem] xs:text-[2.2rem] xsm:text-[2.5rem] lg:text-[3.2rem] font-black'>
                     <div className='text-[#4B6F21]'>Education <span className={` ${fader}`}>{faderWord}</span></div>
                     <div className='w-[90%]'> 
                         Master Your Success: 
