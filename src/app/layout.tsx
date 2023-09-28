@@ -6,7 +6,7 @@ import { Lato } from 'next/font/google'
 
 const poppins = Poppins({weight: ['100', '200', '300', '400', '500', '600', '700', '800',], subsets: ['devanagari']})
 const georgian = Noto_Sans_Georgian({subsets: ['georgian']})
-const lato = Lato({ subsets: ['latin'],
+const lato = Lato({ subsets: ['latin-ext'],
   weight: ['100', '300', '400', '700', '900'],
   style: 'normal'})
 
