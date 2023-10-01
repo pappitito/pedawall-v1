@@ -13,6 +13,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
 import { Raleway } from 'next/font/google'
 import { DASHBOARD_ROUTES } from '@/utils/appData/appRoutes'
+import { IoIosMenu } from 'react-icons/io'
  const raleway = Raleway({style: 'normal', subsets: ['cyrillic-ext']})
 
 // Create a custom theme with primary and secondary colors
@@ -90,7 +91,7 @@ const Header = ({hasNoSearch}: HeaderProps) => {
                     <Searchbar />
                  </div>}
             <div onClick={()=>setMenuOpen(true)} className='text-[#E50914] text-[3rem] hidden xsm:flex sm:hidden'>
-                 <MenuIcon className='!w-[2.1rem] !h-[2.1rem]'/>
+                 <IoIosMenu className='!w-[1.8rem] !h-[1.8rem]'/>
             </div>
             <div className='flex xsm:hidden gap-2 w-full  items-center justify-between'>
                 {!hasNoSearch && 
@@ -147,6 +148,7 @@ const Header = ({hasNoSearch}: HeaderProps) => {
                     <CloseIcon className='!w-[2.1rem] !h-[2.1rem]'/>
                 </div>
                 <div className='flex flex-col gap-0 mt-[2.2rem] items-center '>
+                     <Link className='hover:text-black text-gray-500 font-semibold' href={DASHBOARD_ROUTES.DASHBOARD}>Admin</Link>
                     <Link className='w-full p-3 ' href='/login'>
                         <Button isOutlined content='Login'  />
                     </Link>
