@@ -12,6 +12,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
 import { Raleway } from 'next/font/google'
+import { DASHBOARD_ROUTES } from '@/utils/appData/appRoutes'
  const raleway = Raleway({style: 'normal', subsets: ['cyrillic-ext']})
 
 // Create a custom theme with primary and secondary colors
@@ -81,7 +82,7 @@ const Header = ({hasNoSearch}: HeaderProps) => {
        <div className='w-full flex items-center justify-between'>
         <Link href={'/'} className='flex items-center gap-4'>
              <img className='w-[2.2rem] hidden xsm:flex ' src='/assets/logo.svg' alt='logo' />
-            <h1 className='text-[1.4rem] font-semibold hidden md:flex text-black'><div className={raleway.className}>Pedawalls</div></h1>
+            <h1 className='text-[1.4rem] font-semibold hidden md:flex font-raleway text-black'><div className={raleway.className}>Pedawalls</div></h1>
         </Link>
        <div className='flex w-full sm:w-[90%] items-center md:w-[80%] justify-end  sm:justify-between  gap-3'>
             {!hasNoSearch && 
@@ -123,10 +124,11 @@ const Header = ({hasNoSearch}: HeaderProps) => {
                         <ShoppingCartIcon/>
                      </Badge>
                 </Link>
-                <Link className='w-[6.5rem] md:w-[8rem] ' href='/login'>
+                <Link className='hover:text-black text-gray-500 font-semibold' href={DASHBOARD_ROUTES.DASHBOARD}>Admin</Link>
+                <Link className='w-[5rem] ' href='/login'>
                     <Button isOutlined content='Login'  />
                 </Link>
-                 <Link className=' w-[6.5rem] md:w-[8rem]' href='/signup'>
+                 <Link className='w-[5rem]' href='/signup'>
                     <Button  content='Signup'  />
                  </Link>
              

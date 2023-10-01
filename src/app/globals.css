@@ -4,8 +4,9 @@
 
 body{
   margin: 0 auto;
-  background-color: #EFEEF1;
+  background-color: #F7F8FB;
   overflow: auto;
+  font-family: 'Lato';
 
 }
 .linkSpan{
@@ -65,6 +66,9 @@ body{
 .MuiPaper-root {
   outline: none;
 }
-.ant-switch-checked{
+.ant-switch-checked::after{
  background-color: #4B6F21 !important;
+}
+.font-raleway{
+  font-family: 'Raleway';
 }

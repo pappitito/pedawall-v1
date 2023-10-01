@@ -14,7 +14,7 @@ const page = () => {
             <section className='flex flex-col items-start gap-[2rem] justify-around md:flex-row'>
                 <div className='bg-white items-start p-4 pt-8 pb-8 xsm:p-[2rem] w-full md:min-w-[28rem] max-w-[50rem] rounded-[1.5rem] gap-[2rem] flex flex-col'>
                     {dummyCourses.slice(0,3).map(({coverImg, title, price, school, type, duration})=>(
-                        <div className='flex flex-col-reverse gap-3 md:gap-0 w-full sm:flex-row sm:items-center justify-between'>
+                        <div key={title} className='flex flex-col-reverse gap-3 md:gap-0 w-full sm:flex-row sm:items-center justify-between'>
                             <div className='flex flex-col bxs:flex-row  gap-6'>
                                 <img className='w-[10rem] m-auto bxs:m-0 bxs:w-[6rem] xs:w-[9rem] md:w-[10.5rem] rounded-[0.8rem]' src={coverImg} alt="cover" />
                                 <div className='flex flex-col gap-2 text-[0.8rem] sm:w-[60%]'>

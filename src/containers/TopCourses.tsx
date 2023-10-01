@@ -95,6 +95,7 @@ const TopCourses = () => {
             {dummyCourses.map(({id, title, type, coverImg, level, school, rating, duration})=>(
                
                 <CourseCard 
+                    key={id}
                     id={id}
                     title={title} 
                     type={type} 
