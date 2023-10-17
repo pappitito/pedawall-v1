@@ -37,14 +37,14 @@ const AdminSidebar = () => {
               {(expanded? true : isActive? activeExpand? true : false : false) ? <ExpandLessIcon/> : <ExpandMoreIcon/>}
         </div>
         {(expanded? true : isActive? activeExpand? true : false : false) &&
-          <div className='flex flex-col mt-4 items-end gap-3'>
+          <div className='flex flex-col mt-4 items-end pr-2 gap-3'>
           {childItems?.map(({title: dropTitle, path, alias})=>{
             const myAlias = alias as string
           const isDropActive = pathName.includes(myAlias.toLowerCase())
           console.log(pathName, dropTitle);
           
             return (
-              <Link key={title} onClick={()=> dispatch(closeSidebar())} className={`flex gap-3 text-[0.85rem] w-full cursor-pointer max-w-[10rem] p-[0.5rem] pl-6 hover:bg-gray-100 pr-6 rounded-[0.6rem]  ${isDropActive && 'bg-gray-100'}  items-center`} href={path as string}>{dropTitle}</Link>
+              <Link key={title} onClick={()=> dispatch(closeSidebar())} className={`flex gap-3 text-[0.85rem] w-full cursor-pointer max-w-[9rem] p-[0.5rem] pl-3 hover:bg-gray-100 pr-3 rounded-[0.6rem]  ${isDropActive && 'bg-gray-100'}  items-center`} href={path as string}>{dropTitle}</Link>
             )
           })}
         </div>
@@ -54,7 +54,7 @@ const AdminSidebar = () => {
   }
 
   return (
-    <div className={`bg-white  min-h-[88vh] shadow-sm text-[0.93rem] rounded-[0.6rem] gap-6 flex flex-col pt-[0.5rem] ${isSidebarOpen? 'pl-[0.1rem]' : 'pl-[0.6rem]'} md:pl-[1.2rem] w-full  text-gray-600`}>
+    <div className={`bg-white  min-h-[88vh] shadow-sm text-[0.93rem] rounded-[0.6rem] gap-6 flex flex-col pt-[0.5rem] ${isSidebarOpen? 'pl-[1rem]' : 'pl-[0.6rem]'} md:pl-[1.2rem] w-full  text-gray-600`}>
         <div className='w-full flex sm:hidden cursor-pointer justify-end items-end pt-4 pr-8' onClick={()=> dispatch(toggleSidebarOpen())}> <CloseIcon/></div>
       <div className='w-full max-w-[12rem] pt-[1rem] gap-4 flex flex-col'>
       {sidebarItems.map(({title, icon, isDropdown, path, childItems})=>{
@@ -63,7 +63,7 @@ const AdminSidebar = () => {
         return isDropdown? (
             <DropdownItem key={title} title={title} icon={icon} childItems={childItems} />
         ) : (
-          <Link key={title} href={newPath} onClick={()=> dispatch(closeSidebar())}  className={`flex gap-3 w-full cursor-pointer max-w-[12rem] p-[0.7rem] pl-6 hover:bg-gray-100 pr-6 rounded-[0.6rem]  ${isActive && 'bg-gray-100'}  items-center`}>
+          <Link key={title} href={newPath} onClick={()=> dispatch(closeSidebar())}  className={`flex gap-3 w-full cursor-pointer max-w-[10.5rem] sm:max-w-[12rem] p-[0.7rem] pl-4 hover:bg-gray-100 pr-4 rounded-[0.6rem]  ${isActive && 'bg-gray-100'}  items-center`}>
             {icon}
             <p>{title}</p>
           </Link>
@@ -71,7 +71,7 @@ const AdminSidebar = () => {
           
         
       })}
-        <div className='flex gap-3 cursor-pointer  w-full p-3 pl-6 hover:bg-gray-100 pr-6 rounded-[0.6rem] items-center'>
+        <div className='flex gap-3 cursor-pointer  w-full p-3 pl-4 hover:bg-gray-100 pr-4 rounded-[0.6rem] items-center'>
           <LogoutIcon/>
           <p>Logout</p>
         </div>
