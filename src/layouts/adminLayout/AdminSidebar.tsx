@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import useToolkit from '@/utils/hooks/misc/useToolkit';
 import CloseIcon from '@mui/icons-material/Close';
-import { toggleSidebarOpen } from '@/redux/slices/actuatorSlice';
+import { closeSidebar, toggleSidebarOpen } from '@/redux/slices/actuatorSlice';
 
 
 
@@ -44,7 +44,7 @@ const AdminSidebar = () => {
           console.log(pathName, dropTitle);
           
             return (
-              <Link key={title} className={`flex gap-3 text-[0.85rem] w-full cursor-pointer max-w-[10rem] p-[0.5rem] pl-6 hover:bg-gray-100 pr-6 rounded-[0.6rem]  ${isDropActive && 'bg-gray-100'}  items-center`} href={path as string}>{dropTitle}</Link>
+              <Link key={title} onClick={()=> dispatch(closeSidebar())} className={`flex gap-3 text-[0.85rem] w-full cursor-pointer max-w-[10rem] p-[0.5rem] pl-6 hover:bg-gray-100 pr-6 rounded-[0.6rem]  ${isDropActive && 'bg-gray-100'}  items-center`} href={path as string}>{dropTitle}</Link>
             )
           })}
         </div>
@@ -63,7 +63,7 @@ const AdminSidebar = () => {
         return isDropdown? (
             <DropdownItem key={title} title={title} icon={icon} childItems={childItems} />
         ) : (
-          <Link key={title} href={newPath}  className={`flex gap-3 w-full cursor-pointer max-w-[12rem] p-[0.7rem] pl-6 hover:bg-gray-100 pr-6 rounded-[0.6rem]  ${isActive && 'bg-gray-100'}  items-center`}>
+          <Link key={title} href={newPath} onClick={()=> dispatch(closeSidebar())}  className={`flex gap-3 w-full cursor-pointer max-w-[12rem] p-[0.7rem] pl-6 hover:bg-gray-100 pr-6 rounded-[0.6rem]  ${isActive && 'bg-gray-100'}  items-center`}>
             {icon}
             <p>{title}</p>
           </Link>

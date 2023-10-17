@@ -16,12 +16,19 @@ export const actuatorSlice = createSlice({
                 ...state,
                 isSidebarOpen : !state.isSidebarOpen
             }
+        },
+        closeSidebar : (state)=>{
+            return {
+                ...state,
+                isSidebarOpen : false
+            }
         }
     }
 })
 
 export const {
-    toggleSidebarOpen
+    toggleSidebarOpen,
+    closeSidebar
 } = actuatorSlice.actions
 
 export default actuatorSlice.reducer
