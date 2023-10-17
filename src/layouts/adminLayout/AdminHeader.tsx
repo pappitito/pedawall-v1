@@ -1,5 +1,5 @@
 "use client"
-import { Avatar, Drawer, Input, InputAdornment } from '@mui/material'
+import { Avatar, Drawer, Input, InputAdornment, SwipeableDrawer } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
@@ -31,12 +31,12 @@ const AdminHeader = () => {
             <input className='w-full outline-none bg-transparent p-1 pl-[1rem] text-[0.85rem]' type="text" placeholder='What would you like to do today' />
         </div>
         <img className='w-[1.8rem] mt-[-0.3rem]' src='/assets/profile.svg' />
-        <Drawer className='flex sm:hidden' anchor='left' open={isSidebarOpen} onClose={()=> dispatch(toggleSidebarOpen())}>
-            <div className='w-[100vw] xsm:w-[50vw]'>
+        <SwipeableDrawer onOpen={()=> dispatch(toggleSidebarOpen())} className='flex sm:hidden' anchor='left' open={isSidebarOpen} onClose={()=> dispatch(toggleSidebarOpen())}>
+            <div className='w-[64vw] xsm:w-[50vw]'>
                 <AdminSidebar/>
             </div>
 
-        </Drawer>
+        </SwipeableDrawer>
     </div>
   )
 }
