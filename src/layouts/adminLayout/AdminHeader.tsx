@@ -31,7 +31,7 @@ const AdminHeader = () => {
             <input className='w-full outline-none bg-transparent p-1 pl-[1rem] text-[0.85rem]' type="text" placeholder='What would you like to do today' />
         </div>
         <img className='w-[1.8rem] mt-[-0.3rem]' src='/assets/profile.svg' />
-        <SwipeableDrawer onOpen={()=> dispatch(toggleSidebarOpen())} className='flex sm:hidden' anchor='left' open={isSidebarOpen} onClose={()=> dispatch(toggleSidebarOpen())}>
+        <SwipeableDrawer disableDiscovery={true} onOpen={()=> dispatch(toggleSidebarOpen())} className='flex sm:hidden' anchor='left' open={isSidebarOpen} onClose={()=> dispatch(toggleSidebarOpen())}>
             <div className='w-[64vw] xsm:w-[50vw]'>
                 <AdminSidebar/>
             </div>

@@ -55,8 +55,9 @@ const AdminSidebar = () => {
 
   return (
     <div className={`bg-white  min-h-[88vh] shadow-sm text-[0.93rem] rounded-[0.6rem] gap-6 flex flex-col pt-[0.5rem] ${isSidebarOpen? 'pl-[1rem]' : 'pl-[0.6rem]'} md:pl-[1.2rem] w-full  text-gray-600`}>
-        <div className='w-full flex sm:hidden cursor-pointer justify-end items-end pt-4 pr-8' onClick={()=> dispatch(toggleSidebarOpen())}> <CloseIcon/></div>
-      <div className='w-full max-w-[12rem] pt-[1rem] gap-4 flex flex-col'>
+{/*         <div className='w-full flex sm:hidden cursor-pointer justify-end items-end pt-4 pr-8' onClick={()=> dispatch(toggleSidebarOpen())}> <CloseIcon/></div>
+ */}      
+      <div className='w-full max-w-[12rem] pt-[4.2rem] sm:pt-[1rem] gap-4 flex flex-col'>
       {sidebarItems.map(({title, icon, isDropdown, path, childItems})=>{
         const isActive = pathName.includes(title.toLowerCase())
         const newPath = path as string
